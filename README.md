@@ -6,27 +6,13 @@ For better understanding, we map the RoBERTa tokens to SpaCy tokens, as SpaCy to
 
 ## Grouped Negations and Visualization
 
-In cases of negation, tokens are grouped for better attribution visualization. For example:
-
-### Without Grouping Negations
-
-Below is the token-wise attributions without grouping negations. Each token has its color:
-
-<p><span style="background-color: #edf6df;">I</span> <span style="background-color: #f5f7f3;">'m</span> <span style="background-color: #f7f7f6;">nothing</span> <span style="background-color: #f7f7f6;">but</span> <span style="background-color: #f1f6e8;">the</span> <span style="background-color: #488c20;">least</span> <span style="background-color: #549825;">not</span> <span style="background-color: #d9f0bc;">lazy</span> <span style="background-color: #f2f6ec;">person</span> <span style="background-color: #f6f7f5;">.</span></p>
-
-<p><span style="background-color: #f8f2f5;">I</span> <span style="background-color: #f8f2f5;">'m</span> <span style="background-color: #ae106b;">not</span> <span style="background-color: #f7f7f6;">motivated</span> <span style="background-color: #f7f7f7;">.</span></p>
-
-<p><span style="background-color: #f9eff4;">I</span> <span style="background-color: #f8f5f6;">'m</span> <span style="background-color: #f9eff4;">in</span> <span style="background-color: #b1116d;">no</span> <span style="background-color: #f7f7f6;">way</span> <span style="background-color: #f7f7f6;">motivated</span> <span style="background-color: #f7f7f6;">.</span></p>
-
-## Grouped Negations and Visualization
-
 Here’s how the visualization looks:
 
 ### Without Grouping Negations
-![Without Grouping](images/without_grouping.png)
+<img src="images/without_grouping.png" alt="Without Grouping" width="400">
 
 ### With Grouping Negations
-![With Grouping](images/with_grouping.png)
+<img src="images/with_grouping.png" alt="With Grouping" width="400">
 
 This demonstrates the difference between token attributions with and without grouping negations.
 
