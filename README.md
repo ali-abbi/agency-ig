@@ -4,8 +4,30 @@ This repository is created as a part of the paper "Application of Integrated Gra
 
 For better understanding, we map the RoBERTa tokens to SpaCy tokens, as SpaCy tokens are more similar to word-wise tokenizations. Additionally, for better visualization, we group certain tokens in cases of negations. For example:
 
-- Sentence: `I have never been unmotivated!`
-  - Grouped tokens: `have never been motivated` will be considered as one token and assigned a single color.
+## Grouped Negations and Visualization
+
+In cases of negation, tokens are grouped for better attribution visualization. For example:
+
+### Without Grouping Negations
+
+Below is the token-wise attributions without grouping negations. Each token has its color:
+
+<p><span style="background-color: #edf6df;">I</span> <span style="background-color: #f5f7f3;">'m</span> <span style="background-color: #f7f7f6;">nothing</span> <span style="background-color: #f7f7f6;">but</span> <span style="background-color: #f1f6e8;">the</span> <span style="background-color: #488c20;">least</span> <span style="background-color: #549825;">not</span> <span style="background-color: #d9f0bc;">lazy</span> <span style="background-color: #f2f6ec;">person</span> <span style="background-color: #f6f7f5;">.</span></p>
+
+<p><span style="background-color: #f8f2f5;">I</span> <span style="background-color: #f8f2f5;">'m</span> <span style="background-color: #ae106b;">not</span> <span style="background-color: #f7f7f6;">motivated</span> <span style="background-color: #f7f7f7;">.</span></p>
+
+<p><span style="background-color: #f9eff4;">I</span> <span style="background-color: #f8f5f6;">'m</span> <span style="background-color: #f9eff4;">in</span> <span style="background-color: #b1116d;">no</span> <span style="background-color: #f7f7f6;">way</span> <span style="background-color: #f7f7f6;">motivated</span> <span style="background-color: #f7f7f6;">.</span></p>
+
+### With Grouping Negations
+
+After grouping negations, the visualization looks like this:
+
+<p><span style="background-color: #eff6e4;">I</span> <span style="background-color: #f6f7f5;">'m</span> <span style="background-color: #f7f7f6;">nothing</span> <span style="background-color: #f7f7f6;">but</span> <span style="background-color: #f2f6ec;">the</span> <span style="background-color: #6dad36;">least</span> <span style="background-color: #488c20;">not</span> <span style="background-color: #488c20;">lazy</span> <span style="background-color: #f3f7ef;">person</span> <span style="background-color: #f6f7f5;">.</span></p>
+
+<p><span style="background-color: #f9f0f5;">I</span> <span style="background-color: #f9f1f5;">'m</span> <span style="background-color: #ae106b;">not</span> <span style="background-color: #ae106b;">motivated</span> <span style="background-color: #f7f7f7;">.</span></p>
+
+This demonstrates how grouping improves token attribution by assigning consistent colors to related tokens, making the visualization more intuitive and meaningful.
+
 
 ---
 
