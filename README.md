@@ -34,6 +34,8 @@ is displayed in a weaker green color compared to the previous example, because i
 
 **The last two processes are performed in the function `_map_ag`.**
 
+---
+
 ## Installation
 
 To set up the environment and install the required libraries, follow these steps:
@@ -61,6 +63,7 @@ Also you will see this code cell to install SpaCy's language model:
 import spacy
 !python -m spacy download en_core_web_sm --quiet
 ```
+---
 
 ## Example Usage
 
@@ -105,10 +108,10 @@ for i in range(len(sentences)):
 /agency-ig/
 ├── README.md          # Documentation
 ├── LICENSE            # License file
-├── requirements.txt   # Dependencies
+├── installments.txt   # Dependencies
 ├── agency_ig.py       # Main code file
-└── examples/
-    └── example_usage.py  # Example script
+└── images/            # Images used in readme file
+
 ```
 
 ---
@@ -136,4 +139,4 @@ If you use this code in your research, please cite it as:
 
 ## Contact
 
-For any questions or issues, feel free to open an issue on GitHub or contact [your_email@example.com](mailto:your_email@example.com).
+For any questions or issues, feel free to contact [ali.aghababaei96@gmail.com](mailto:ali.aghababaei96@gmail.com).
