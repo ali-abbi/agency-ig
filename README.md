@@ -1,8 +1,35 @@
 # Agency IG
 
-This repository is created as a part of the paper "Application of Integrated Gradients Explainability to Sociopsychological Semantic Markers." In this code, the RoBERTa-based Bertagent model, which calculates the agency level of the text, is used. Using the Integrated Gradients package from the Captum library, we extract the attributions of tokens in the text.
+This repository is created for the purpose of the paper "Application of Integrated Gradients Explainability to Sociopsychological Semantic Markers." In order to have more readable results before rendinering tokens attributions calcuated by Integrated gradients method graphicaly , some preprocessing steps are necessary as follow:
 
-For better understanding, we map the RoBERTa tokens to SpaCy tokens, as SpaCy tokens are more similar to word-wise tokenizations. Additionally, for better visualization, we group certain tokens in cases of negations. For example:
+## RoBERTa to SpaCy mapping
+The RoBERTa tokenizer often splits words into multiple tokens (e.g., X), where darker highlights indicate stronger association values. For example, the word "unmotivated" is split into three tokens. To address this, we used the `_spacy_map` function in the code to align RoBERTa tokens with [SpaCy](https://spacy.io), a popular Python NLP tool that provides a more interpretable token structure. Using offset information, the attributions of split tokens are summed to produce unified values, resulting in SpaCy-style associations (e.g., Y).
+
+
+## Group Negations
+Negations often carry most of the association meaning, although conceptually, the association should also be linked to the word being negated. For example, in the negative agency sentence:
+
+**These people are not lazy at all! (13)**
+
+the word “not” carries most of the association value. However, in practice, we want the pair “not lazy” to convey the positive agentic meaning. To address this, we use [SpaCy](https://spacy.io) to identify such pairs and provide a more interpretable result where the two words are linked and assigned the sum of their agency values.
+
+The underlying rationale is to associate a negation with the word or verb it refers to. In the case of an auxiliary verb, we also include the adjectival complement (acomp, e.g., “not be lazy”) or the passive auxiliary (auxpass, e.g., “never been unmotivated”) to fully capture the meaning. Additionally, phrasal verb particles (prt, e.g., “shut down”) are included in the analysis. `_group_negations` function in the code was used for this purpose.
+
+## Resolving Inconsistent Association Signs
+Some of the associations might have a sign that is not coherent with the overall agency value. For example, in a sentence that carries a positive agency overall, the words “person” and “lazy” might carry negative association values, which could be confusing. To address this, in the visual representation of agency at the word level, we set to zero all association values that are inconsistent with the overall agency.
+
+## Normalizing the attributions
+Finally, to facilitate the interpretation of the results, the maximum association value is normalized to the actual agency value **F(x)**. This ensures that lower agency levels are represented by weaker colors. For example:
+
+**Join our next #fridays4future strike! (17)**
+
+is displayed in a weaker green color compared to (16) because it carries a lower agency level.
+
+the last two processes are done in the function `_map_ag`.
+
+
+
+
 
 ## Grouped Negations and Visualization
 
