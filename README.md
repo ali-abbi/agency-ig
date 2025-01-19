@@ -18,15 +18,18 @@ Below is the token-wise attributions without grouping negations. Each token has 
 
 <p><span style="background-color: #f9eff4;">I</span> <span style="background-color: #f8f5f6;">'m</span> <span style="background-color: #f9eff4;">in</span> <span style="background-color: #b1116d;">no</span> <span style="background-color: #f7f7f6;">way</span> <span style="background-color: #f7f7f6;">motivated</span> <span style="background-color: #f7f7f6;">.</span></p>
 
+## Grouped Negations and Visualization
+
+Here’s how the visualization looks:
+
+### Without Grouping Negations
+![Without Grouping](images/without_grouping.png)
+
 ### With Grouping Negations
+![With Grouping](images/with_grouping.png)
 
-After grouping negations, the visualization looks like this:
+This demonstrates the difference between token attributions with and without grouping negations.
 
-<p><span style="background-color: #eff6e4;">I</span> <span style="background-color: #f6f7f5;">'m</span> <span style="background-color: #f7f7f6;">nothing</span> <span style="background-color: #f7f7f6;">but</span> <span style="background-color: #f2f6ec;">the</span> <span style="background-color: #6dad36;">least</span> <span style="background-color: #488c20;">not</span> <span style="background-color: #488c20;">lazy</span> <span style="background-color: #f3f7ef;">person</span> <span style="background-color: #f6f7f5;">.</span></p>
-
-<p><span style="background-color: #f9f0f5;">I</span> <span style="background-color: #f9f1f5;">'m</span> <span style="background-color: #ae106b;">not</span> <span style="background-color: #ae106b;">motivated</span> <span style="background-color: #f7f7f7;">.</span></p>
-
-This demonstrates how grouping improves token attribution by assigning consistent colors to related tokens, making the visualization more intuitive and meaningful.
 
 
 ---
