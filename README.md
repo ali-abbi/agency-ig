@@ -101,6 +101,11 @@ for i in range(len(sentences)):
 ```
 
 ---
+## Example Output
+
+<img src="images/with_grouping.png" alt="output" width="400">
+
+---
 
 ## File Structure
 
